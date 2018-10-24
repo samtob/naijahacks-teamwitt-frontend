@@ -161,7 +161,7 @@
     </header>
 <script>
 var i = 0;
-var txt = 'Check the weather status of your cities';
+var txt = 'Check the weather status of your City';
 var speed = 100;
 var myApp =  setInterval( myMove, speed);
 function myMove() {
@@ -173,15 +173,22 @@ function myMove() {
 }
 </script>
 <h2 style="text-align: center; margin-top: 20px; color: coral;" id="demo"></h2>
-		<form method="GET" action="Get.php">
+		<form id="form" method="GET" action="Get.php">
 			<input placeholder="Enter the name of city/country {city.name},{country.code}" type="text" name="q" required>
+            
 			<input type="submit" name="submit">
 		</form>
+        <h3 style="text-align: center;"> or use Latitude or Longitude to generate the weather data of City/Cities to invest in.</h3>
+        <center><form method="GET" action="zip.php">
+			<input placeholder="Enter the latitude" type="text" name="lat" required><br>
+            <input style="margin-top: 5px;" placeholder="Enter the longitude" type="text" name="lon" required><br>
+            <input style="margin-top: 5px; width: 200px;" type="submit" name="submit">
+		</form></center>
 	<style>
-	form {
+	#form  {
 		font-size: 24px;
 		display: flex;
-		margin-top: 15%;
+		margin-top: 5%;
 		justify-content: center;
 		align-items: center;
 	}

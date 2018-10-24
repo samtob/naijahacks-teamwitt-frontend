@@ -1,6 +1,6 @@
 
 <html>
-<head><title>Weather Report of <?php echo $_GET['q']; ?> </title>
+<head><title>Weather Report of <?php echo $_GET['lat']; ?> </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 	<script type="text/javascript"src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -14,14 +14,13 @@ h1, h2, h3, h4, h5, h6 {
 
 <?php
 error_reporting(0);
-//$get = json_decode(file_get_contents('http://ip-api.com/json/'),true);
-//date_default_timezone_set($get['timezone']);
-$city = $_GET['q'];
-
+$get = json_decode(file_get_contents('http://ip-api.com/json/'),true);
+date_default_timezone_set($get['timezone']);
+$lat = $_GET['lat'];
+$lat = $_GET['lon'];
 $api = "e91853481dea11b1d12af125ef5057b8";
- $string = "http://api.openweathermap.org/data/2.5/weather?q=".$city."&units=metric&appid=".$api;
- $data = json_decode(file_get_contents($string),true);
- //$data = json_decode(file_get_contents($stringApp),true);
+$stringApp = "http://api.openweathermap.org/data/2.5/weather?lat=".$lat."&lon=".$lon."&appid=".$api;
+ $data = json_decode(file_get_contents($stringApp),true);
  $temp = $data['main']['temp'];
  $icon = $data['weather'][0]['icon'];
  $visibility = $data['visibility'];
