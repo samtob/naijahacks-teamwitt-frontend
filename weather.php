@@ -181,8 +181,8 @@ function myMove() {
         <h3 style="text-align: center;"> or use Latitude or Longitude to generate the weather data of City/Cities to invest in.</h3>
         <center><form method="GET" action="zip.php">
 			<input placeholder="Enter the latitude" type="text" name="lat" required><br>
-            <input style="margin-top: 5px;" placeholder="Enter the longitude" type="text" name="lon" required><br>
-            <input style="margin-top: 5px; width: 200px;" type="submit" name="submit">
+            <input style="margin-top: 15px;" placeholder="Enter the longitude" type="text" name="lon" required><br>
+            <input style="margin-top: 10px; width: 200px;" type="submit" name="submit">
 		</form></center>
 	<style>
 	#form  {
